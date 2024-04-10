@@ -22,17 +22,25 @@ n = int(input())
 
 
 queen_list = []
+cnt = 0
 def check(queen, new):
-    right = 
-    left =
+    right = abs(queen[0] - new[0])
+    left = abs(queen[0] + new[0])
+    if new[0] != queen[0] or new[1] == queen[1] or right == new[1] or left == new[1]:
+        pass
+
 
 def find_nqueen(x):
     if x == n:
         global cnt 
         cnt += 1
-        return
+        True
     for y in (n):
         for queen in queen_list:
-            check(queen, (x,y))
+            if check(queen, (x,y)):
+                queen_list.append
+
+
+
 
 
