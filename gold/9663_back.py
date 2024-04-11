@@ -1,4 +1,4 @@
-n = int(input())
+# n = int(input())
 
 # lay = [['*' for j in range(n)]for i in range(n)]
 
@@ -19,27 +19,39 @@ n = int(input())
 #                         lay[i][k] == ' '# 가져온 조건에 맞는 애 변환하기
 #                         if i == n:
 #                             cnt += 1
+import sys 
 
+input = sys.stdin.readline
+
+n = int(input())
 
 queen_list = []
 cnt = 0
 def check(queen, new):
-    right = abs(queen[0] - new[0])
-    left = abs(queen[0] + new[0])
-    if new[0] != queen[0] or new[1] == queen[1] or right == new[1] or left == new[1]:
-        pass
-
+    if queen[1] == new[1] or abs(queen[0] - new[0]) == abs(queen[1] - new[1]):
+        return False
+    return True
 
 def find_nqueen(x):
+    global cnt
     if x == n:
-        global cnt 
         cnt += 1
-        True
-    for y in (n):
+        return
+    for y in range(n):
+        a = True
         for queen in queen_list:
-            if check(queen, (x,y)):
-                queen_list.append
+            if not check(queen, (x, y)):
+                a = False
+                break
+        if a:
+            queen_list.append((x, y))
+            find_nqueen(x + 1)
+            queen_list.pop()  
 
+find_nqueen(0)
+
+print(cnt)
+  
 
 
 
