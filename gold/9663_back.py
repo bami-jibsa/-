@@ -19,11 +19,7 @@
 #                         lay[i][k] == ' '# 가져온 조건에 맞는 애 변환하기
 #                         if i == n:
 #                             cnt += 1
-import sys 
-
-input = sys.stdin.readline
-
-n = int(input())
+n = 8
 
 queen_list = []
 cnt = 0
@@ -31,6 +27,9 @@ def check(queen, new):
     if queen[1] == new[1] or abs(queen[0] - new[0]) == abs(queen[1] - new[1]):
         return False
     return True
+
+    
+        
 
 def find_nqueen(x):
     global cnt
