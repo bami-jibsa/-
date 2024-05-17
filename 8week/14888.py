@@ -6,7 +6,7 @@ num = list(map(int, input().split()))
 ops = list(map(int, input().split()))
 
 maximum = -1e9
-minimum = 1e9
+minimum = 1e9 
 
 def btr(depth, total, plus, minus, multiply, divide):
     global maximum, minimum
