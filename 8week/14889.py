@@ -2,21 +2,26 @@ from queue import Queue
 
 n = int(input())
 
-layer = [['*' for _ in range(n)] for _ in range(n)]
+# layer = [['*' for _ in range(n)] for _ in range(n)]
 
 
+# for i in range(n):
+#     li = []
+#     li += input().split()
+#     for j in range(n):
+#         layer[i][j] = int(li[j])
+
+
+layer = []
 for i in range(n):
-    li = []
-    li += input().split()
-    for j in range(n):
-        layer[i][j] = li[j]
+    layer.append(list(map(int, input().split())))
 
 
 def cal(name, x):
     sco = 0
     for i in range(len(name)):
         for j in range(i + 1, len(name)):
-            sco += int(x[name[i]][name[j]]) + int(x[name[i]][name[j]])
+            sco += x[name[i]][name[j]] + x[name[j]][name[i]]
     return sco
 
 def back(n, z):
