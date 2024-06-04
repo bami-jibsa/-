@@ -14,7 +14,7 @@ def cal(a):
     return not big
 
 while True:
-    li = input().rstrip()
+    li = input().rstrip() 
     if li == '.':
         break
     print("yes" if cal(li) else 'no')

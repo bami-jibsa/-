@@ -49,3 +49,4 @@ def star(ll):
     return li
 
 print('\n'.join(star(n)))
+ 

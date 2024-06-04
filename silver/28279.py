@@ -29,7 +29,7 @@ def cal(x):
         else:
             print(1)
     elif x[0] == 7:
-        if li:
+        if li: 
             print(li[0])
         else:
             print(-1)
