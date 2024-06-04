@@ -8,3 +8,4 @@ list_dict = dict(zip(s_li, list(range(len(s_li)))))
 
 for x in li:
     print(list_dict[x])
+
