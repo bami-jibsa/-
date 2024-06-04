@@ -2,4 +2,4 @@ n = int(input())
 
 print(n*n*n)
 
-print(3)
+print(3) 
