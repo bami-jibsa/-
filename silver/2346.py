@@ -26,4 +26,5 @@ cjr_lay = cir(lay)
 ckr_li = cir(li)
 
 def cal(layer, li):
-
+    a = 22
+    
